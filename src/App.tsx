@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import PatientForm from './pages/PatientForm';
+import Main from './pages/Main';
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/patient-form" element={<PatientForm />} />
+        <Route path="/main" element={<Main />} />
       </Routes>
     </Router>
   );
