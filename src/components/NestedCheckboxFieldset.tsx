@@ -18,11 +18,11 @@ const NestedCheckboxFieldset: React.FC<NestedCheckboxFieldsetProps> = ({
   options,
   handleNestedChange
 }) => (
-  <fieldset className="mb-4">
+  <fieldset className="mb-4 border border-gray-300 p-4 rounded-md">
     <legend className="text-sm font-medium text-gray-700">{label}</legend>
-    <div className="mt-2 space-y-2">
+    <div className="grid grid-cols-2 gap-2 mt-2">
       {options.map((option) => (
-        <div key={option.name} className="flex items-center">
+        <div key={option.name} className="flex items-center text-sm text-gray-600">
           <input
             type="checkbox"
             id={`${section}-${option.name}`}
@@ -34,7 +34,7 @@ const NestedCheckboxFieldset: React.FC<NestedCheckboxFieldsetProps> = ({
           />
           <label
             htmlFor={`${section}-${option.name}`}
-            className="ml-2 block text-sm text-gray-700"
+            className="ml-2"
           >
             {option.label}
           </label>
